@@ -10,7 +10,7 @@
 # Installation
 vex can be installed via pip:
 ```
-pip install vex
+pip install python-vex
 ```
 # Usage examples
 Here is how to use the module in your own python code.
