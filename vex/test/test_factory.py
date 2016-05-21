@@ -13,6 +13,7 @@ class TestFactory(unittest.TestCase):
         self.assertFalse(regex.match("http://youtube.com"))
         self.assertTrue(regex.match("http://youtube.com/watch?v=XRlKyl6lov8"))
         self.assertTrue(regex.match("http://www.youtube.com/watch?v=XRlKyl6lov8"))
+        self.assertTrue(regex.match("http://www.youtube.com/embed/0Rnq1NpHdmw?start=0&amp"))
 
     def test_links_youtube(self):
         extractor = self.factory.rules[0]

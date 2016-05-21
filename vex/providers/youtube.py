@@ -26,7 +26,9 @@ class YouTubeProvider(BaseProvider):
         result = {}
 
         try:
-            video = pafy.new(url)
+            video_id = REGEX_YOUTUBE_VIDEO_ID.search(url)
+            video = pafy.new(
+                self.decorate(video_id.group("video_id")))
         except IOError, exc:
             raise ValueError(unicode(exc))
 

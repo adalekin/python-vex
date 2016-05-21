@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from vex.providers import InstagramProvider, FacebookProvider
+from vex.providers import InstagramProvider, FacebookProvider, YouTubeProvider
 
 
 class TestInstagramProvider(unittest.TestCase):
@@ -25,3 +25,13 @@ class TestFacebookProvider(unittest.TestCase):
         self.assertIsNotNone(
             self.provider.parse(
                 url="https://www.facebook.com/photo.php?v=596614120387204"))
+
+
+class TestYouTubeProvider(unittest.TestCase):
+    def setUp(self):
+        self.provider = YouTubeProvider()
+
+    def test_seek(self):
+        self.assertIsNotNone(
+            self.provider.parse(
+                url="http://www.youtube.com/embed/0Rnq1NpHdmw?start=0&amp"))
