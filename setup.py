@@ -17,7 +17,7 @@ class PyTest(Command):
         raise SystemExit(errno)
 
 setup(
-    name='vex',
+    name='python-vex',
     version='1.0.0',
     packages=['vex', 'vex.providers'],
     url='https://github.com/adalekin/vex',

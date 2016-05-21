@@ -1,4 +1,4 @@
-[![](https://travis-ci.org/adalekin/vex.svg?branch=master)](https://travis-ci.org/adalekin/vex)
+[![](https://travis-ci.org/adalekin/python-vex.svg?branch=master)](https://travis-ci.org/adalekin/python-vex)
 
 # Features
 - Retreive metadata from any URL (not only direct YouTube link)
