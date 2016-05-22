@@ -46,10 +46,11 @@ class YouTubeProvider(BaseProvider):
 
         low_resolution_stream = \
             [stream for stream in video.streams
-                if stream.resolution == "640x360" and stream.extension == "mp4"][0]
-        result["low_resolution"] = self._stream_to_dict(
-            low_resolution_stream
-        )
+                if stream.resolution == "640x360" and stream.extension == "mp4"]
+        if low_resolution_stream:
+            result["low_resolution"] = self._stream_to_dict(
+                low_resolution_stream[0]
+            )
 
         result["thumbnail"] = \
             "http://img.youtube.com/vi/%s/maxresdefault.jpg" % video.videoid

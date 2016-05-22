@@ -47,3 +47,8 @@ class TestFactory(unittest.TestCase):
         self.assertTrue(regex.match("http://instagram.com/p/iooF4VuGtp/"))
         self.assertTrue(regex.match("http://instagram.com/p/iooF4VuGtp"))
         self.assertFalse(regex.match("http://instagram.com/iooF4VuGtp/"))
+
+    def test_problem_urls(self):
+        self.assertIsNotNone(
+            self.factory.extract(
+                "http://arstechnica.com/business/2016/05/cable-lobby-group-broadband-competition-is-bad-for-customers/?comments=1"))
